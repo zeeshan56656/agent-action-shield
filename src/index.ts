@@ -35,5 +35,17 @@ export {
 // Error class
 export { ShieldError } from "./types.js";
 
+// Policy helpers
+export { resolvePolicy, matchGlob, type ResolvedPolicy } from "./policy.js";
+
+// Risk helpers
+export {
+  clampScore,
+  resolveTier,
+  mergeThresholds,
+  validateThresholds,
+  explainTier,
+} from "./risk.js";
+
 // Stable version marker (kept in sync with package.json#version).
 export const __version = "0.1.0" as const;
