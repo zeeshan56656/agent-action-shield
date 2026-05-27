@@ -47,5 +47,17 @@ export {
   explainTier,
 } from "./risk.js";
 
+// Audit log
+export {
+  AuditLog,
+  canonicalize,
+  generateEphemeralSecret,
+  type VerifyResult,
+  type VerifyFailureReason,
+} from "./audit.js";
+
+// Storage adapters
+export { memoryAdapter, localStorageAdapter } from "./adapters.js";
+
 // Stable version marker (kept in sync with package.json#version).
 export const __version = "0.1.0" as const;
