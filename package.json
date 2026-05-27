@@ -1,0 +1,139 @@
+{
+  "name": "agent-action-shield",
+  "version": "0.1.0",
+  "description": "Transaction-time risk gate for AI agents. Score tool calls, escalate by tier, audit every decision. Framework-agnostic core with React and Vue adapters.",
+  "keywords": [
+    "ai",
+    "ai-agent",
+    "ai-agents",
+    "ai-security",
+    "agent-security",
+    "agent-safety",
+    "llm-security",
+    "llm-safety",
+    "prompt-injection",
+    "human-in-the-loop",
+    "hitl",
+    "approval",
+    "confirmation",
+    "tool-call",
+    "tool-use",
+    "risk-scoring",
+    "audit",
+    "audit-log",
+    "tamper-evident",
+    "owasp-llm",
+    "llm-top-10",
+    "excessive-agency",
+    "react",
+    "vue",
+    "typescript",
+    "langchain",
+    "langgraph",
+    "vercel-ai-sdk",
+    "mcp"
+  ],
+  "author": "Muhammad Zeeshan <muhammad.zeeshan2@outlook.com>",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./react": {
+      "import": {
+        "types": "./dist/react.d.ts",
+        "default": "./dist/react.js"
+      },
+      "require": {
+        "types": "./dist/react.d.cts",
+        "default": "./dist/react.cjs"
+      }
+    },
+    "./vue": {
+      "import": {
+        "types": "./dist/vue.d.ts",
+        "default": "./dist/vue.js"
+      },
+      "require": {
+        "types": "./dist/vue.d.cts",
+        "default": "./dist/vue.cjs"
+      }
+    },
+    "./react/modal.css": "./dist/react/modal.css",
+    "./vue/modal.css": "./dist/vue/modal.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf dist",
+    "example:headless": "tsx examples/headless.ts",
+    "prepublishOnly": "npm run clean && npm run build && cross-env vitest run"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "vue": "^3.0.0"
+  },
+  "peerDependenciesMeta": {
+    "react": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.0.0",
+    "@types/node": "^22.0.0",
+    "@vue/test-utils": "^2.4.0",
+    "@types/react": "^18.3.0",
+    "@vitest/coverage-v8": "^2.1.0",
+    "cross-env": "^7.0.3",
+    "react": "^18.3.0",
+    "react-dom": "^18.3.0",
+    "@types/react-dom": "^18.3.0",
+    "rimraf": "^6.0.0",
+    "tsup": "^8.3.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0",
+    "vue": "^3.5.0",
+    "happy-dom": "^15.0.0"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeeshan56656/agent-action-shield.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zeeshan56656/agent-action-shield/issues"
+  },
+  "homepage": "https://github.com/zeeshan56656/agent-action-shield#readme",
+  "publishConfig": {
+    "access": "public"
+  }
+}

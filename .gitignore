@@ -1,0 +1,16 @@
+node_modules
+dist
+.DS_Store
+*.log
+.env
+.env.local
+.env.*.local
+coverage
+.cache
+.nyc_output
+.tsbuildinfo
+*.tsbuildinfo
+.vscode
+.idea
+.consumer-test
+*.tgz
