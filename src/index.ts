@@ -47,6 +47,9 @@ export {
   explainTier,
 } from "./risk.js";
 
+// Core class
+export { ActionShield } from "./shield.js";
+
 // Audit log
 export {
   AuditLog,
